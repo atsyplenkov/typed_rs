@@ -11,3 +11,7 @@
 2. установите библиотеку `renv` командой `install.packages("renv")`
 3. восстановите среду R выполнив `renv::restore()`
 4. запустите `main.R`
+
+## Лицензия
+
+Материалы распространяются под лицензией [Creative Commons Attribution 4.0 International (CC BY 4.0) License](https://github.com/atsyplenkov/typed_rs/blob/main/LICENSE)
