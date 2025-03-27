@@ -30,4 +30,4 @@ create_new_post <-
     )
   }
 
-create_new_post("frank_energy")
+create_new_post("kobyla")
