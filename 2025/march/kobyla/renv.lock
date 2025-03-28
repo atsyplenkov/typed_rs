@@ -13,6 +13,51 @@
     ]
   },
   "Packages": {
+    "Matrix": {
+      "Package": "Matrix",
+      "Version": "1.7-3",
+      "Source": "Repository",
+      "VersionNote": "do also bump src/version.h, inst/include/Matrix/version.h",
+      "Date": "2025-03-05",
+      "Priority": "recommended",
+      "Title": "Sparse and Dense Matrix Classes and Methods",
+      "Description": "A rich hierarchy of sparse and dense matrix classes, including general, symmetric, triangular, and diagonal matrices with numeric, logical, or pattern entries.  Efficient methods for operating on such matrices, often wrapping the 'BLAS', 'LAPACK', and 'SuiteSparse' libraries.",
+      "License": "GPL (>= 2) | file LICENCE",
+      "URL": "https://Matrix.R-forge.R-project.org",
+      "BugReports": "https://R-forge.R-project.org/tracker/?atid=294&group_id=61",
+      "Contact": "Matrix-authors@R-project.org",
+      "Authors@R": "c(person(\"Douglas\", \"Bates\", role = \"aut\", comment = c(ORCID = \"0000-0001-8316-9503\")), person(\"Martin\", \"Maechler\", role = c(\"aut\", \"cre\"), email = \"mmaechler+Matrix@gmail.com\", comment = c(ORCID = \"0000-0002-8685-9910\")), person(\"Mikael\", \"Jagan\", role = \"aut\", comment = c(ORCID = \"0000-0002-3542-2938\")), person(\"Timothy A.\", \"Davis\", role = \"ctb\", comment = c(ORCID = \"0000-0001-7614-6899\", \"SuiteSparse libraries\", \"collaborators listed in dir(system.file(\\\"doc\\\", \\\"SuiteSparse\\\", package=\\\"Matrix\\\"), pattern=\\\"License\\\", full.names=TRUE, recursive=TRUE)\")), person(\"George\", \"Karypis\", role = \"ctb\", comment = c(ORCID = \"0000-0003-2753-1437\", \"METIS library\", \"Copyright: Regents of the University of Minnesota\")), person(\"Jason\", \"Riedy\", role = \"ctb\", comment = c(ORCID = \"0000-0002-4345-4200\", \"GNU Octave's condest() and onenormest()\", \"Copyright: Regents of the University of California\")), person(\"Jens\", \"Oehlschlägel\", role = \"ctb\", comment = \"initial nearPD()\"), person(\"R Core Team\", role = \"ctb\", comment = c(ROR = \"02zz1nj61\", \"base R's matrix implementation\")))",
+      "Depends": [
+        "R (>= 4.4)",
+        "methods"
+      ],
+      "Imports": [
+        "grDevices",
+        "graphics",
+        "grid",
+        "lattice",
+        "stats",
+        "utils"
+      ],
+      "Suggests": [
+        "MASS",
+        "datasets",
+        "sfsmisc",
+        "tools"
+      ],
+      "Enhances": [
+        "SparseM",
+        "graph"
+      ],
+      "LazyData": "no",
+      "LazyDataNote": "not possible, since we use data/*.R and our S4 classes",
+      "BuildResaveData": "no",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "yes",
+      "Author": "Douglas Bates [aut] (<https://orcid.org/0000-0001-8316-9503>), Martin Maechler [aut, cre] (<https://orcid.org/0000-0002-8685-9910>), Mikael Jagan [aut] (<https://orcid.org/0000-0002-3542-2938>), Timothy A. Davis [ctb] (<https://orcid.org/0000-0001-7614-6899>, SuiteSparse libraries, collaborators listed in dir(system.file(\"doc\", \"SuiteSparse\", package=\"Matrix\"), pattern=\"License\", full.names=TRUE, recursive=TRUE)), George Karypis [ctb] (<https://orcid.org/0000-0003-2753-1437>, METIS library, Copyright: Regents of the University of Minnesota), Jason Riedy [ctb] (<https://orcid.org/0000-0002-4345-4200>, GNU Octave's condest() and onenormest(), Copyright: Regents of the University of California), Jens Oehlschlägel [ctb] (initial nearPD()), R Core Team [ctb] (02zz1nj61, base R's matrix implementation)",
+      "Maintainer": "Martin Maechler <mmaechler+Matrix@gmail.com>",
+      "Repository": "RSPM"
+    },
     "R6": {
       "Package": "R6",
       "Version": "2.6.1",
@@ -38,6 +83,132 @@
       "Author": "Winston Chang [aut, cre], Posit Software, PBC [cph, fnd]",
       "Maintainer": "Winston Chang <winston@posit.co>",
       "Repository": "RSPM"
+    },
+    "RApiSerialize": {
+      "Package": "RApiSerialize",
+      "Version": "0.1.4",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "R API Serialization",
+      "Date": "2024-09-28",
+      "Authors@R": "c(person(\"Dirk\", \"Eddelbuettel\", role = c(\"aut\", \"cre\"), email = \"edd@debian.org\", comment = c(ORCID = \"0000-0001-6419-907X\")), person(\"Ei-ji\", \"Nakama\", role = \"aut\", comment = \"Code in package Rhpc\"), person(\"Junji\", \"Nakano\", role = \"aut\", comment = \"Code in package Rhpc\"), person(\"R Core\", role = \"aut\", comment = \"Code in R file src/main/serialize.c\"))",
+      "Description": "Access to the internal R serialization code is provided for use by other packages at the C function level by using the registration of native function mechanism. Client packages simply include a single header file RApiSerializeAPI.h provided by this package. This packages builds on the Rhpc package by Ei-ji Nakama and Junji Nakano which also includes a (partial) copy of the file src/main/serialize.c from R itself. The R Core group is the original author of the serialization code made available by this package.",
+      "URL": "https://github.com/eddelbuettel/rapiserialize, https://dirk.eddelbuettel.com/code/rapiserialize.html",
+      "BugReports": "https://github.com/eddelbuettel/rapiserialize/issues",
+      "License": "GPL (>= 2)",
+      "NeedsCompilation": "yes",
+      "Author": "Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>), Ei-ji Nakama [aut] (Code in package Rhpc), Junji Nakano [aut] (Code in package Rhpc), R Core [aut] (Code in R file src/main/serialize.c)",
+      "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
+    },
+    "Rcpp": {
+      "Package": "Rcpp",
+      "Version": "1.0.14",
+      "Source": "Repository",
+      "Title": "Seamless R and C++ Integration",
+      "Date": "2025-01-11",
+      "Authors@R": "c(person(\"Dirk\", \"Eddelbuettel\", role = c(\"aut\", \"cre\"), email = \"edd@debian.org\", comment = c(ORCID = \"0000-0001-6419-907X\")), person(\"Romain\", \"Francois\", role = \"aut\", comment = c(ORCID = \"0000-0002-2444-4226\")), person(\"JJ\", \"Allaire\", role = \"aut\", comment = c(ORCID = \"0000-0003-0174-9868\")), person(\"Kevin\", \"Ushey\", role = \"aut\", comment = c(ORCID = \"0000-0003-2880-7407\")), person(\"Qiang\", \"Kou\", role = \"aut\", comment = c(ORCID = \"0000-0001-6786-5453\")), person(\"Nathan\", \"Russell\", role = \"aut\"), person(\"Iñaki\", \"Ucar\", role = \"aut\", comment = c(ORCID = \"0000-0001-6403-5550\")), person(\"Doug\", \"Bates\", role = \"aut\", comment = c(ORCID = \"0000-0001-8316-9503\")), person(\"John\", \"Chambers\", role = \"aut\"))",
+      "Description": "The 'Rcpp' package provides R functions as well as C++ classes which offer a seamless integration of R and C++. Many R data types and objects can be mapped back and forth to C++ equivalents which facilitates both writing of new code as well as easier integration of third-party libraries. Documentation about 'Rcpp' is provided by several vignettes included in this package, via the 'Rcpp Gallery' site at <https://gallery.rcpp.org>, the paper by Eddelbuettel and Francois (2011, <doi:10.18637/jss.v040.i08>), the book by Eddelbuettel (2013, <doi:10.1007/978-1-4614-6868-4>) and the paper by Eddelbuettel and Balamuta (2018, <doi:10.1080/00031305.2017.1375990>); see 'citation(\"Rcpp\")' for details.",
+      "Imports": [
+        "methods",
+        "utils"
+      ],
+      "Suggests": [
+        "tinytest",
+        "inline",
+        "rbenchmark",
+        "pkgKitten (>= 0.1.2)"
+      ],
+      "URL": "https://www.rcpp.org, https://dirk.eddelbuettel.com/code/rcpp.html, https://github.com/RcppCore/Rcpp",
+      "License": "GPL (>= 2)",
+      "BugReports": "https://github.com/RcppCore/Rcpp/issues",
+      "MailingList": "rcpp-devel@lists.r-forge.r-project.org",
+      "RoxygenNote": "6.1.1",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "yes",
+      "Author": "Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>), Romain Francois [aut] (<https://orcid.org/0000-0002-2444-4226>), JJ Allaire [aut] (<https://orcid.org/0000-0003-0174-9868>), Kevin Ushey [aut] (<https://orcid.org/0000-0003-2880-7407>), Qiang Kou [aut] (<https://orcid.org/0000-0001-6786-5453>), Nathan Russell [aut], Iñaki Ucar [aut] (<https://orcid.org/0000-0001-6403-5550>), Doug Bates [aut] (<https://orcid.org/0000-0001-8316-9503>), John Chambers [aut]",
+      "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+      "Repository": "RSPM"
+    },
+    "RcppParallel": {
+      "Package": "RcppParallel",
+      "Version": "5.1.10",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Parallel Programming Tools for 'Rcpp'",
+      "Authors@R": "c( person(\"JJ\", \"Allaire\", role = c(\"aut\"), email = \"jj@rstudio.com\"), person(\"Romain\", \"Francois\", role = c(\"aut\", \"cph\")), person(\"Kevin\", \"Ushey\", role = c(\"aut\", \"cre\"), email = \"kevin@rstudio.com\"), person(\"Gregory\", \"Vandenbrouck\", role = \"aut\"), person(\"Marcus\", \"Geelnard\", role = c(\"aut\", \"cph\"), comment = \"TinyThread library, https://tinythreadpp.bitsnbites.eu/\"), person(\"Hamada S.\", \"Badr\", email = \"badr@jhu.edu\", role = c(\"ctb\"), comment = c(ORCID = \"0000-0002-9808-2344\")), person(family = \"Posit, PBC\", role = \"cph\"), person(family = \"Intel\", role = c(\"aut\", \"cph\"), comment = \"Intel TBB library, https://www.threadingbuildingblocks.org/\"), person(family = \"Microsoft\", role = \"cph\") )",
+      "Description": "High level functions for parallel programming with 'Rcpp'. For example, the 'parallelFor()' function can be used to convert the work of a standard serial \"for\" loop into a parallel one and the 'parallelReduce()' function can be used for accumulating aggregate or other values.",
+      "Depends": [
+        "R (>= 3.0.2)"
+      ],
+      "Suggests": [
+        "Rcpp",
+        "RUnit",
+        "knitr",
+        "rmarkdown"
+      ],
+      "SystemRequirements": "GNU make, Intel TBB, Windows: cmd.exe and cscript.exe, Solaris: g++ is required",
+      "License": "GPL (>= 3)",
+      "URL": "https://rcppcore.github.io/RcppParallel/, https://github.com/RcppCore/RcppParallel",
+      "BugReports": "https://github.com/RcppCore/RcppParallel/issues",
+      "Biarch": "TRUE",
+      "RoxygenNote": "7.1.1",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "yes",
+      "Author": "JJ Allaire [aut], Romain Francois [aut, cph], Kevin Ushey [aut, cre], Gregory Vandenbrouck [aut], Marcus Geelnard [aut, cph] (TinyThread library, https://tinythreadpp.bitsnbites.eu/), Hamada S. Badr [ctb] (<https://orcid.org/0000-0002-9808-2344>), Posit, PBC [cph], Intel [aut, cph] (Intel TBB library, https://www.threadingbuildingblocks.org/), Microsoft [cph]",
+      "Maintainer": "Kevin Ushey <kevin@rstudio.com>",
+      "Repository": "RSPM"
+    },
+    "RcppTOML": {
+      "Package": "RcppTOML",
+      "Version": "0.2.3",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "'Rcpp' Bindings to Parser for \"Tom's Obvious Markup Language\"",
+      "Date": "2025-03-08",
+      "Authors@R": "c(person(\"Dirk\", \"Eddelbuettel\", role = c(\"aut\", \"cre\"), email = \"edd@debian.org\", comment = c(ORCID = \"0000-0001-6419-907X\")), person(\"Mark\", \"Gillard\", role = \"aut\", comment = \"Author of 'toml++' header library\"))",
+      "Description": "The configuration format defined by 'TOML' (which expands to \"Tom's Obvious Markup Language\") specifies an excellent format (described at <https://toml.io/en/>) suitable for both human editing as well as the common uses of a machine-readable format. This package uses 'Rcpp' to connect to the 'toml++' parser written by Mark Gillard to R.",
+      "SystemRequirements": "A C++17 compiler",
+      "BugReports": "https://github.com/eddelbuettel/rcpptoml/issues",
+      "URL": "http://dirk.eddelbuettel.com/code/rcpp.toml.html",
+      "Imports": [
+        "Rcpp (>= 1.0.8)"
+      ],
+      "Depends": [
+        "R (>= 3.3.0)"
+      ],
+      "LinkingTo": [
+        "Rcpp"
+      ],
+      "Suggests": [
+        "tinytest"
+      ],
+      "License": "GPL (>= 2)",
+      "NeedsCompilation": "yes",
+      "Author": "Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>), Mark Gillard [aut] (Author of 'toml++' header library)",
+      "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
+    },
+    "SnowballC": {
+      "Package": "SnowballC",
+      "Version": "0.7.1",
+      "Source": "Repository",
+      "Type": "Package",
+      "Date": "2023-04-25",
+      "Title": "Snowball Stemmers Based on the C 'libstemmer' UTF-8 Library",
+      "Authors@R": "person(\"Milan\", \"Bouchet-Valat\", email=\"nalimilan@club.fr\", role=c(\"aut\", \"cre\"))",
+      "Description": "An R interface to the C 'libstemmer' library that implements Porter's word stemming algorithm for collapsing words to a common root to aid comparison of vocabulary. Currently supported languages are Arabic, Basque, Catalan, Danish, Dutch, English, Finnish, French, German, Greek, Hindi, Hungarian, Indonesian, Irish, Italian, Lithuanian, Nepali, Norwegian, Portuguese, Romanian, Russian, Spanish, Swedish, Tamil and Turkish.",
+      "License": "BSD_3_clause + file LICENSE",
+      "Copyright": "Dr Martin Porter (2001) and Richard Boulton (2004, 2005) for the 'libstemmer' C library, and Milan Bouchet-Valat (2013) for the R package contents.",
+      "URL": "https://github.com/nalimilan/R.TeMiS",
+      "BugReports": "https://github.com/nalimilan/R.TeMiS/issues",
+      "NeedsCompilation": "yes",
+      "Author": "Milan Bouchet-Valat [aut, cre]",
+      "Maintainer": "Milan Bouchet-Valat <nalimilan@club.fr>",
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "askpass": {
       "Package": "askpass",
@@ -404,6 +575,84 @@
       "Maintainer": "Jennifer Bryan <jenny@posit.co>",
       "Repository": "RSPM"
     },
+    "here": {
+      "Package": "here",
+      "Version": "1.0.1",
+      "Source": "Repository",
+      "Title": "A Simpler Way to Find Your Files",
+      "Date": "2020-12-13",
+      "Authors@R": "c(person(given = \"Kirill\", family = \"M\\u00fcller\", role = c(\"aut\", \"cre\"), email = \"krlmlr+r@mailbox.org\", comment = c(ORCID = \"0000-0002-1416-3412\")), person(given = \"Jennifer\", family = \"Bryan\", role = \"ctb\", email = \"jenny@rstudio.com\", comment = c(ORCID = \"0000-0002-6983-2759\")))",
+      "Description": "Constructs paths to your project's files. Declare the relative path of a file within your project with 'i_am()'. Use the 'here()' function as a drop-in replacement for 'file.path()', it will always locate the files relative to your project root.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://here.r-lib.org/, https://github.com/r-lib/here",
+      "BugReports": "https://github.com/r-lib/here/issues",
+      "Imports": [
+        "rprojroot (>= 2.0.2)"
+      ],
+      "Suggests": [
+        "conflicted",
+        "covr",
+        "fs",
+        "knitr",
+        "palmerpenguins",
+        "plyr",
+        "readr",
+        "rlang",
+        "rmarkdown",
+        "testthat",
+        "uuid",
+        "withr"
+      ],
+      "VignetteBuilder": "knitr",
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "RoxygenNote": "7.1.1.9000",
+      "Config/testthat/edition": "3",
+      "NeedsCompilation": "no",
+      "Author": "Kirill Müller [aut, cre] (<https://orcid.org/0000-0002-1416-3412>), Jennifer Bryan [ctb] (<https://orcid.org/0000-0002-6983-2759>)",
+      "Maintainer": "Kirill Müller <krlmlr+r@mailbox.org>",
+      "Repository": "RSPM"
+    },
+    "httr": {
+      "Package": "httr",
+      "Version": "1.4.7",
+      "Source": "Repository",
+      "Title": "Tools for Working with URLs and HTTP",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\")), person(\"Posit, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Description": "Useful tools for working with HTTP organised by HTTP verbs (GET(), POST(), etc). Configuration functions make it easy to control additional request components (authenticate(), add_headers() and so on).",
+      "License": "MIT + file LICENSE",
+      "URL": "https://httr.r-lib.org/, https://github.com/r-lib/httr",
+      "BugReports": "https://github.com/r-lib/httr/issues",
+      "Depends": [
+        "R (>= 3.5)"
+      ],
+      "Imports": [
+        "curl (>= 5.0.2)",
+        "jsonlite",
+        "mime",
+        "openssl (>= 0.8)",
+        "R6"
+      ],
+      "Suggests": [
+        "covr",
+        "httpuv",
+        "jpeg",
+        "knitr",
+        "png",
+        "readr",
+        "rmarkdown",
+        "testthat (>= 0.8.0)",
+        "xml2"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.2.3",
+      "NeedsCompilation": "no",
+      "Author": "Hadley Wickham [aut, cre], Posit, PBC [cph, fnd]",
+      "Maintainer": "Hadley Wickham <hadley@posit.co>",
+      "Repository": "RSPM"
+    },
     "httr2": {
       "Package": "httr2",
       "Version": "1.1.2",
@@ -462,6 +711,32 @@
       "Maintainer": "Hadley Wickham <hadley@posit.co>",
       "Repository": "CRAN"
     },
+    "janeaustenr": {
+      "Package": "janeaustenr",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Title": "Jane Austen's Complete Novels",
+      "Authors@R": "person(\"Julia\", \"Silge\", , \"julia.silge@gmail.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-3671-836X\"))",
+      "Description": "Full texts for Jane Austen's 6 completed novels, ready for text analysis. These novels are \"Sense and Sensibility\", \"Pride and Prejudice\", \"Mansfield Park\", \"Emma\", \"Northanger Abbey\", and \"Persuasion\".",
+      "License": "MIT + file LICENSE",
+      "URL": "https://github.com/juliasilge/janeaustenr",
+      "BugReports": "https://github.com/juliasilge/janeaustenr/issues",
+      "Depends": [
+        "R (>= 3.5)"
+      ],
+      "Suggests": [
+        "dplyr",
+        "testthat"
+      ],
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "RoxygenNote": "7.2.1",
+      "NeedsCompilation": "no",
+      "Author": "Julia Silge [aut, cre] (<https://orcid.org/0000-0002-3671-836X>)",
+      "Maintainer": "Julia Silge <julia.silge@gmail.com>",
+      "Repository": "RSPM"
+    },
     "jsonlite": {
       "Package": "jsonlite",
       "Version": "1.9.1",
@@ -491,6 +766,45 @@
       "NeedsCompilation": "yes",
       "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>), Duncan Temple Lang [ctb], Lloyd Hilaiel [cph] (author of bundled libyajl)",
       "Repository": "RSPM"
+    },
+    "lattice": {
+      "Package": "lattice",
+      "Version": "0.22-6",
+      "Source": "Repository",
+      "Date": "2024-03-20",
+      "Priority": "recommended",
+      "Title": "Trellis Graphics for R",
+      "Authors@R": "c(person(\"Deepayan\", \"Sarkar\", role = c(\"aut\", \"cre\"), email = \"deepayan.sarkar@r-project.org\", comment = c(ORCID = \"0000-0003-4107-1553\")), person(\"Felix\", \"Andrews\", role = \"ctb\"), person(\"Kevin\", \"Wright\", role = \"ctb\", comment = \"documentation\"), person(\"Neil\", \"Klepeis\", role = \"ctb\"), person(\"Johan\", \"Larsson\", role = \"ctb\", comment = \"miscellaneous improvements\"), person(\"Zhijian (Jason)\", \"Wen\", role = \"cph\", comment = \"filled contour code\"), person(\"Paul\", \"Murrell\", role = \"ctb\", email = \"paul@stat.auckland.ac.nz\"), person(\"Stefan\", \"Eng\", role = \"ctb\", comment = \"violin plot improvements\"), person(\"Achim\", \"Zeileis\", role = \"ctb\", comment = \"modern colors\"), person(\"Alexandre\", \"Courtiol\", role = \"ctb\", comment = \"generics for larrows, lpolygon, lrect and lsegments\") )",
+      "Description": "A powerful and elegant high-level data visualization system inspired by Trellis graphics, with an emphasis on multivariate data. Lattice is sufficient for typical graphics needs, and is also flexible enough to handle most nonstandard requirements. See ?Lattice for an introduction.",
+      "Depends": [
+        "R (>= 4.0.0)"
+      ],
+      "Suggests": [
+        "KernSmooth",
+        "MASS",
+        "latticeExtra",
+        "colorspace"
+      ],
+      "Imports": [
+        "grid",
+        "grDevices",
+        "graphics",
+        "stats",
+        "utils"
+      ],
+      "Enhances": [
+        "chron",
+        "zoo"
+      ],
+      "LazyLoad": "yes",
+      "LazyData": "yes",
+      "License": "GPL (>= 2)",
+      "URL": "https://lattice.r-forge.r-project.org/",
+      "BugReports": "https://github.com/deepayan/lattice/issues",
+      "NeedsCompilation": "yes",
+      "Author": "Deepayan Sarkar [aut, cre] (<https://orcid.org/0000-0003-4107-1553>), Felix Andrews [ctb], Kevin Wright [ctb] (documentation), Neil Klepeis [ctb], Johan Larsson [ctb] (miscellaneous improvements), Zhijian (Jason) Wen [cph] (filled contour code), Paul Murrell [ctb], Stefan Eng [ctb] (violin plot improvements), Achim Zeileis [ctb] (modern colors), Alexandre Courtiol [ctb] (generics for larrows, lpolygon, lrect and lsegments)",
+      "Maintainer": "Deepayan Sarkar <deepayan.sarkar@r-project.org>",
+      "Repository": "CRAN"
     },
     "lifecycle": {
       "Package": "lifecycle",
@@ -596,6 +910,27 @@
       "NeedsCompilation": "no",
       "Author": "Edgar Ruiz [aut, cre], Posit Software, PBC [cph, fnd]",
       "Maintainer": "Edgar Ruiz <edgar@posit.co>",
+      "Repository": "RSPM"
+    },
+    "mime": {
+      "Package": "mime",
+      "Version": "0.13",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Map Filenames to MIME Types",
+      "Authors@R": "c( person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\", URL = \"https://yihui.org\")), person(\"Jeffrey\", \"Horner\", role = \"ctb\"), person(\"Beilei\", \"Bian\", role = \"ctb\") )",
+      "Description": "Guesses the MIME type from a filename extension using the data derived from /etc/mime.types in UNIX-type systems.",
+      "Imports": [
+        "tools"
+      ],
+      "License": "GPL",
+      "URL": "https://github.com/yihui/mime",
+      "BugReports": "https://github.com/yihui/mime/issues",
+      "RoxygenNote": "7.3.2",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "yes",
+      "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>, https://yihui.org), Jeffrey Horner [ctb], Beilei Bian [ctb]",
+      "Maintainer": "Yihui Xie <xie@yihui.name>",
       "Repository": "RSPM"
     },
     "ollamar": {
@@ -744,6 +1079,115 @@
       "NeedsCompilation": "no",
       "Repository": "RSPM"
     },
+    "png": {
+      "Package": "png",
+      "Version": "0.1-8",
+      "Source": "Repository",
+      "Title": "Read and write PNG images",
+      "Author": "Simon Urbanek <Simon.Urbanek@r-project.org>",
+      "Maintainer": "Simon Urbanek <Simon.Urbanek@r-project.org>",
+      "Depends": [
+        "R (>= 2.9.0)"
+      ],
+      "Description": "This package provides an easy and simple way to read, write and display bitmap images stored in the PNG format. It can read and write both files and in-memory raw vectors.",
+      "License": "GPL-2 | GPL-3",
+      "SystemRequirements": "libpng",
+      "URL": "http://www.rforge.net/png/",
+      "NeedsCompilation": "yes",
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
+    },
+    "purrr": {
+      "Package": "purrr",
+      "Version": "1.0.4",
+      "Source": "Repository",
+      "Title": "Functional Programming Tools",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0003-4757-117X\")), person(\"Lionel\", \"Henry\", , \"lionel@posit.co\", role = \"aut\"), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"), comment = c(ROR = \"03wc8by49\")) )",
+      "Description": "A complete and consistent functional programming toolkit for R.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://purrr.tidyverse.org/, https://github.com/tidyverse/purrr",
+      "BugReports": "https://github.com/tidyverse/purrr/issues",
+      "Depends": [
+        "R (>= 4.0)"
+      ],
+      "Imports": [
+        "cli (>= 3.6.1)",
+        "lifecycle (>= 1.0.3)",
+        "magrittr (>= 1.5.0)",
+        "rlang (>= 1.1.1)",
+        "vctrs (>= 0.6.3)"
+      ],
+      "Suggests": [
+        "covr",
+        "dplyr (>= 0.7.8)",
+        "httr",
+        "knitr",
+        "lubridate",
+        "rmarkdown",
+        "testthat (>= 3.0.0)",
+        "tibble",
+        "tidyselect"
+      ],
+      "LinkingTo": [
+        "cli"
+      ],
+      "VignetteBuilder": "knitr",
+      "Biarch": "true",
+      "Config/build/compilation-database": "true",
+      "Config/Needs/website": "tidyverse/tidytemplate, tidyr",
+      "Config/testthat/edition": "3",
+      "Config/testthat/parallel": "TRUE",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.2",
+      "NeedsCompilation": "yes",
+      "Author": "Hadley Wickham [aut, cre] (<https://orcid.org/0000-0003-4757-117X>), Lionel Henry [aut], Posit Software, PBC [cph, fnd] (03wc8by49)",
+      "Maintainer": "Hadley Wickham <hadley@posit.co>",
+      "Repository": "RSPM"
+    },
+    "qs": {
+      "Package": "qs",
+      "Version": "0.27.3",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Quick Serialization of R Objects",
+      "Date": "2025-3-7",
+      "Authors@R": "c( person(\"Travers\", \"Ching\", email = \"traversc@gmail.com\", role = c(\"aut\", \"cre\", \"cph\")), person(\"Yann\", \"Collet\", role = c(\"ctb\", \"cph\"), comment = \"Yann Collet is the author of the bundled zstd, lz4 and xxHash code\"), person(\"Facebook, Inc.\", role = \"cph\", comment = \"Facebook is the copyright holder of the bundled zstd code\"), person(\"Reichardt\", \"Tino\", role = c(\"ctb\", \"cph\"), comment = \"Contributor/copyright holder of zstd bundled code\"), person(\"Skibinski\", \"Przemyslaw\", role = c(\"ctb\", \"cph\"), comment = \"Contributor/copyright holder of zstd bundled code\"), person(\"Mori\", \"Yuta\", role = c(\"ctb\", \"cph\"), comment = \"Contributor/copyright holder of zstd bundled code\"), person(\"Romain\", \"Francois\", role = c(\"ctb\", \"cph\"), comment = \"Derived example/tutorials for ALTREP structures\"), person(\"Francesc\", \"Alted\", role = c(\"ctb\", \"cph\"), comment = \"Shuffling routines derived from Blosc library\"), person(\"Bryce\", \"Chamberlain\", email = \"superchordate@gmail.com\", role = c(\"ctb\"), comment = \"qsavem and qload functions\"), person(\"Salim\", \"Brüggemann\", email = \"salim-b@pm.me\", role = c(\"ctb\"), comment = \"Contributing to documentation (ORCID:0000-0002-5329-5987)\"))",
+      "Maintainer": "Travers Ching <traversc@gmail.com>",
+      "Description": "Provides functions for quickly writing and reading any R object to and from disk.",
+      "License": "GPL-3",
+      "LazyData": "true",
+      "Biarch": "true",
+      "Depends": [
+        "R (>= 3.0.2)"
+      ],
+      "Imports": [
+        "Rcpp",
+        "RApiSerialize (>= 0.1.4)",
+        "stringfish (>= 0.15.1)"
+      ],
+      "LinkingTo": [
+        "Rcpp",
+        "RApiSerialize",
+        "stringfish",
+        "BH"
+      ],
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.2",
+      "Suggests": [
+        "knitr",
+        "rmarkdown",
+        "testthat",
+        "dplyr",
+        "data.table"
+      ],
+      "VignetteBuilder": "knitr",
+      "Copyright": "This package includes code from the 'zstd' library owned by Facebook, Inc. and created by Yann Collet; the 'lz4' library created and owned by Yann Collet; xxHash library created and owned by Yann Collet; and code derived from the 'Blosc' library created and owned by Francesc Alted.",
+      "URL": "https://github.com/qsbase/qs",
+      "BugReports": "https://github.com/qsbase/qs/issues",
+      "NeedsCompilation": "yes",
+      "Author": "Travers Ching [aut, cre, cph], Yann Collet [ctb, cph] (Yann Collet is the author of the bundled zstd, lz4 and xxHash code), Facebook, Inc. [cph] (Facebook is the copyright holder of the bundled zstd code), Reichardt Tino [ctb, cph] (Contributor/copyright holder of zstd bundled code), Skibinski Przemyslaw [ctb, cph] (Contributor/copyright holder of zstd bundled code), Mori Yuta [ctb, cph] (Contributor/copyright holder of zstd bundled code), Romain Francois [ctb, cph] (Derived example/tutorials for ALTREP structures), Francesc Alted [ctb, cph] (Shuffling routines derived from Blosc library), Bryce Chamberlain [ctb] (qsavem and qload functions), Salim Brüggemann [ctb] (Contributing to documentation (ORCID:0000-0002-5329-5987))",
+      "Repository": "RSPM"
+    },
     "rappdirs": {
       "Package": "rappdirs",
       "Version": "0.3.3",
@@ -826,6 +1270,56 @@
       "Maintainer": "Kevin Ushey <kevin@rstudio.com>",
       "Repository": "RSPM"
     },
+    "reticulate": {
+      "Package": "reticulate",
+      "Version": "1.42.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Interface to 'Python'",
+      "Authors@R": "c( person(\"Tomasz\", \"Kalinowski\", role = c(\"ctb\", \"cre\"), email = \"tomasz@posit.co\"), person(\"Kevin\", \"Ushey\", role = c(\"aut\"), email = \"kevin@posit.co\"), person(\"JJ\", \"Allaire\", role = c(\"aut\"), email = \"jj@posit.co\"), person(\"RStudio\", role = c(\"cph\", \"fnd\")), person(\"Yuan\", \"Tang\", role = c(\"aut\", \"cph\"), email = \"terrytangyuan@gmail.com\", comment = c(ORCID = \"0000-0001-5243-233X\")), person(\"Dirk\", \"Eddelbuettel\", role = c(\"ctb\", \"cph\"), email = \"edd@debian.org\"), person(\"Bryan\", \"Lewis\", role = c(\"ctb\", \"cph\"), email = \"blewis@illposed.net\"), person(\"Sigrid\", \"Keydana\", role = c(\"ctb\"), email = \"sigrid@posit.co\"), person(\"Ryan\", \"Hafen\", role = c(\"ctb\", \"cph\"), email = \"rhafen@gmail.com\"), person(\"Marcus\", \"Geelnard\", role = c(\"ctb\", \"cph\"), comment = \"TinyThread library, http://tinythreadpp.bitsnbites.eu/\") )",
+      "Description": "Interface to 'Python' modules, classes, and functions. When calling into 'Python', R data types are automatically converted to their equivalent 'Python' types. When values are returned from 'Python' to R they are converted back to R types. Compatible with all versions of 'Python' >= 2.7.",
+      "License": "Apache License 2.0",
+      "URL": "https://rstudio.github.io/reticulate/, https://github.com/rstudio/reticulate",
+      "BugReports": "https://github.com/rstudio/reticulate/issues",
+      "SystemRequirements": "Python (>= 2.7.0)",
+      "Encoding": "UTF-8",
+      "Depends": [
+        "R (>= 3.5)"
+      ],
+      "Imports": [
+        "Matrix",
+        "Rcpp (>= 1.0.7)",
+        "RcppTOML",
+        "graphics",
+        "here",
+        "jsonlite",
+        "methods",
+        "png",
+        "rappdirs",
+        "utils",
+        "rlang",
+        "withr"
+      ],
+      "Suggests": [
+        "callr",
+        "knitr",
+        "glue",
+        "cli",
+        "rmarkdown",
+        "pillar",
+        "testthat"
+      ],
+      "LinkingTo": [
+        "Rcpp"
+      ],
+      "RoxygenNote": "7.3.2",
+      "VignetteBuilder": "knitr",
+      "Config/build/compilation-database": "true",
+      "NeedsCompilation": "yes",
+      "Author": "Tomasz Kalinowski [ctb, cre], Kevin Ushey [aut], JJ Allaire [aut], RStudio [cph, fnd], Yuan Tang [aut, cph] (<https://orcid.org/0000-0001-5243-233X>), Dirk Eddelbuettel [ctb, cph], Bryan Lewis [ctb, cph], Sigrid Keydana [ctb], Ryan Hafen [ctb, cph], Marcus Geelnard [ctb, cph] (TinyThread library, http://tinythreadpp.bitsnbites.eu/)",
+      "Maintainer": "Tomasz Kalinowski <tomasz@posit.co>",
+      "Repository": "RSPM"
+    },
     "rlang": {
       "Package": "rlang",
       "Version": "1.1.5",
@@ -872,6 +1366,234 @@
       "NeedsCompilation": "yes",
       "Author": "Lionel Henry [aut, cre], Hadley Wickham [aut], mikefc [cph] (Hash implementation based on Mike's xxhashlite), Yann Collet [cph] (Author of the embedded xxHash library), Posit, PBC [cph, fnd]",
       "Maintainer": "Lionel Henry <lionel@posit.co>",
+      "Repository": "RSPM"
+    },
+    "rprojroot": {
+      "Package": "rprojroot",
+      "Version": "2.0.4",
+      "Source": "Repository",
+      "Title": "Finding Files in Project Subdirectories",
+      "Authors@R": "person(given = \"Kirill\", family = \"M\\u00fcller\", role = c(\"aut\", \"cre\"), email = \"kirill@cynkra.com\", comment = c(ORCID = \"0000-0002-1416-3412\"))",
+      "Description": "Robust, reliable and flexible paths to files below a project root. The 'root' of a project is defined as a directory that matches a certain criterion, e.g., it contains a certain regular file.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://rprojroot.r-lib.org/, https://github.com/r-lib/rprojroot",
+      "BugReports": "https://github.com/r-lib/rprojroot/issues",
+      "Depends": [
+        "R (>= 3.0.0)"
+      ],
+      "Suggests": [
+        "covr",
+        "knitr",
+        "lifecycle",
+        "mockr",
+        "rlang",
+        "rmarkdown",
+        "testthat (>= 3.0.0)",
+        "withr"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.2.3",
+      "NeedsCompilation": "no",
+      "Author": "Kirill Müller [aut, cre] (<https://orcid.org/0000-0002-1416-3412>)",
+      "Maintainer": "Kirill Müller <kirill@cynkra.com>",
+      "Repository": "RSPM"
+    },
+    "rvest": {
+      "Package": "rvest",
+      "Version": "1.0.4",
+      "Source": "Repository",
+      "Title": "Easily Harvest (Scrape) Web Pages",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Description": "Wrappers around the 'xml2' and 'httr' packages to make it easy to download, then manipulate, HTML and XML.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://rvest.tidyverse.org/, https://github.com/tidyverse/rvest",
+      "BugReports": "https://github.com/tidyverse/rvest/issues",
+      "Depends": [
+        "R (>= 3.6)"
+      ],
+      "Imports": [
+        "cli",
+        "glue",
+        "httr (>= 0.5)",
+        "lifecycle (>= 1.0.3)",
+        "magrittr",
+        "rlang (>= 1.1.0)",
+        "selectr",
+        "tibble",
+        "xml2 (>= 1.3)"
+      ],
+      "Suggests": [
+        "chromote",
+        "covr",
+        "knitr",
+        "R6",
+        "readr",
+        "repurrrsive",
+        "rmarkdown",
+        "spelling",
+        "stringi (>= 0.3.1)",
+        "testthat (>= 3.0.2)",
+        "webfakes"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Config/testthat/edition": "3",
+      "Config/testthat/parallel": "true",
+      "Encoding": "UTF-8",
+      "Language": "en-US",
+      "RoxygenNote": "7.3.1",
+      "NeedsCompilation": "no",
+      "Author": "Hadley Wickham [aut, cre], Posit Software, PBC [cph, fnd]",
+      "Maintainer": "Hadley Wickham <hadley@posit.co>",
+      "Repository": "RSPM"
+    },
+    "selectr": {
+      "Package": "selectr",
+      "Version": "0.4-2",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Translate CSS Selectors to XPath Expressions",
+      "Date": "2019-11-20",
+      "Authors@R": "c(person(\"Simon\", \"Potter\", role = c(\"aut\", \"trl\", \"cre\"), email = \"simon@sjp.co.nz\"), person(\"Simon\", \"Sapin\", role = \"aut\"), person(\"Ian\", \"Bicking\", role = \"aut\"))",
+      "License": "BSD_3_clause + file LICENCE",
+      "Depends": [
+        "R (>= 3.0)"
+      ],
+      "Imports": [
+        "methods",
+        "stringr",
+        "R6"
+      ],
+      "Suggests": [
+        "testthat",
+        "XML",
+        "xml2"
+      ],
+      "URL": "https://sjp.co.nz/projects/selectr",
+      "BugReports": "https://github.com/sjp/selectr/issues",
+      "Description": "Translates a CSS3 selector into an equivalent XPath expression. This allows us to use CSS selectors when working with the XML package as it can only evaluate XPath expressions. Also provided are convenience functions useful for using CSS selectors on XML nodes. This package is a port of the Python package 'cssselect' (<https://cssselect.readthedocs.io/>).",
+      "NeedsCompilation": "no",
+      "Author": "Simon Potter [aut, trl, cre], Simon Sapin [aut], Ian Bicking [aut]",
+      "Maintainer": "Simon Potter <simon@sjp.co.nz>",
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
+    },
+    "stringfish": {
+      "Package": "stringfish",
+      "Version": "0.16.0",
+      "Source": "Repository",
+      "Title": "Alt String Implementation",
+      "Date": "2023-11-27",
+      "Authors@R": "c( person(\"Travers\", \"Ching\", email = \"traversc@gmail.com\", role = c(\"aut\", \"cre\", \"cph\")), person(\"Phillip\", \"Hazel\", role = c(\"ctb\"), comment = \"Bundled PCRE2 code\"), person(\"Zoltan\", \"Herczeg\", role = c(\"ctb\", \"cph\"), comment = \"Bundled PCRE2 code\"), person(\"University of Cambridge\", role = c(\"cph\"), comment = \"Bundled PCRE2 code\"), person(\"Tilera Corporation\", role = c(\"cph\"), comment = \"Stack-less Just-In-Time compiler bundled with PCRE2\"), person(\"Yann\", \"Collet\", role = c(\"ctb\", \"cph\"), comment = \"Yann Collet is the author of the bundled xxHash code\"))",
+      "Maintainer": "Travers Ching <traversc@gmail.com>",
+      "Description": "Provides an extendable, performant and multithreaded 'alt-string' implementation backed by 'C++' vectors and strings.",
+      "License": "GPL-3",
+      "Biarch": "true",
+      "Encoding": "UTF-8",
+      "Depends": [
+        "R (>= 3.0.2)"
+      ],
+      "SystemRequirements": "GNU make",
+      "LinkingTo": [
+        "Rcpp (>= 0.12.18.3)",
+        "RcppParallel (>= 5.1.4)"
+      ],
+      "Imports": [
+        "Rcpp",
+        "RcppParallel"
+      ],
+      "Suggests": [
+        "qs",
+        "knitr",
+        "rmarkdown",
+        "usethis",
+        "dplyr",
+        "stringr",
+        "rlang"
+      ],
+      "VignetteBuilder": "knitr",
+      "RoxygenNote": "7.2.3",
+      "Copyright": "Copyright for the bundled 'PCRE2' library is held by University of Cambridge, Zoltan Herczeg and Tilera Coporation (Stack-less Just-In-Time compiler); Copyright for the bundled 'xxHash' code is held by Yann Collet.",
+      "URL": "https://github.com/traversc/stringfish",
+      "BugReports": "https://github.com/traversc/stringfish/issues",
+      "NeedsCompilation": "yes",
+      "Author": "Travers Ching [aut, cre, cph], Phillip Hazel [ctb] (Bundled PCRE2 code), Zoltan Herczeg [ctb, cph] (Bundled PCRE2 code), University of Cambridge [cph] (Bundled PCRE2 code), Tilera Corporation [cph] (Stack-less Just-In-Time compiler bundled with PCRE2), Yann Collet [ctb, cph] (Yann Collet is the author of the bundled xxHash code)",
+      "Repository": "RSPM"
+    },
+    "stringi": {
+      "Package": "stringi",
+      "Version": "1.8.7",
+      "Source": "Repository",
+      "Date": "2025-03-27",
+      "Title": "Fast and Portable Character String Processing Facilities",
+      "Description": "A collection of character string/text/natural language processing tools for pattern searching (e.g., with 'Java'-like regular expressions or the 'Unicode' collation algorithm), random string generation, case mapping, string transliteration, concatenation, sorting, padding, wrapping, Unicode normalisation, date-time formatting and parsing, and many more. They are fast, consistent, convenient, and - thanks to 'ICU' (International Components for Unicode) - portable across all locales and platforms. Documentation about 'stringi' is provided via its website at <https://stringi.gagolewski.com/> and the paper by Gagolewski (2022, <doi:10.18637/jss.v103.i02>).",
+      "URL": "https://stringi.gagolewski.com/, https://github.com/gagolews/stringi, https://icu.unicode.org/",
+      "BugReports": "https://github.com/gagolews/stringi/issues",
+      "SystemRequirements": "ICU4C (>= 61, optional)",
+      "Type": "Package",
+      "Depends": [
+        "R (>= 3.4)"
+      ],
+      "Imports": [
+        "tools",
+        "utils",
+        "stats"
+      ],
+      "Biarch": "TRUE",
+      "License": "file LICENSE",
+      "Authors@R": "c(person(given = \"Marek\", family = \"Gagolewski\", role = c(\"aut\", \"cre\", \"cph\"), email = \"marek@gagolewski.com\", comment = c(ORCID = \"0000-0003-0637-6028\")), person(given = \"Bartek\", family = \"Tartanus\", role = \"ctb\"), person(\"Unicode, Inc. and others\", role=\"ctb\", comment = \"ICU4C source code, Unicode Character Database\") )",
+      "RoxygenNote": "7.3.2",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "yes",
+      "Author": "Marek Gagolewski [aut, cre, cph] (<https://orcid.org/0000-0003-0637-6028>), Bartek Tartanus [ctb], Unicode, Inc. and others [ctb] (ICU4C source code, Unicode Character Database)",
+      "Maintainer": "Marek Gagolewski <marek@gagolewski.com>",
+      "License_is_FOSS": "yes",
+      "Repository": "CRAN"
+    },
+    "stringr": {
+      "Package": "stringr",
+      "Version": "1.5.1",
+      "Source": "Repository",
+      "Title": "Simple, Consistent Wrappers for Common String Operations",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\", \"cph\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Description": "A consistent, simple and easy to use set of wrappers around the fantastic 'stringi' package. All function and argument names (and positions) are consistent, all functions deal with \"NA\"'s and zero length vectors in the same way, and the output from one function is easy to feed into the input of another.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://stringr.tidyverse.org, https://github.com/tidyverse/stringr",
+      "BugReports": "https://github.com/tidyverse/stringr/issues",
+      "Depends": [
+        "R (>= 3.6)"
+      ],
+      "Imports": [
+        "cli",
+        "glue (>= 1.6.1)",
+        "lifecycle (>= 1.0.3)",
+        "magrittr",
+        "rlang (>= 1.0.0)",
+        "stringi (>= 1.5.3)",
+        "vctrs (>= 0.4.0)"
+      ],
+      "Suggests": [
+        "covr",
+        "dplyr",
+        "gt",
+        "htmltools",
+        "htmlwidgets",
+        "knitr",
+        "rmarkdown",
+        "testthat (>= 3.0.0)",
+        "tibble"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "RoxygenNote": "7.2.3",
+      "NeedsCompilation": "no",
+      "Author": "Hadley Wickham [aut, cre, cph], Posit Software, PBC [cph, fnd]",
+      "Maintainer": "Hadley Wickham <hadley@posit.co>",
       "Repository": "RSPM"
     },
     "sys": {
@@ -967,6 +1689,56 @@
       "Maintainer": "Kirill Müller <kirill@cynkra.com>",
       "Repository": "RSPM"
     },
+    "tidyr": {
+      "Package": "tidyr",
+      "Version": "1.3.1",
+      "Source": "Repository",
+      "Title": "Tidy Messy Data",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\")), person(\"Davis\", \"Vaughan\", , \"davis@posit.co\", role = \"aut\"), person(\"Maximilian\", \"Girlich\", role = \"aut\"), person(\"Kevin\", \"Ushey\", , \"kevin@posit.co\", role = \"ctb\"), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Description": "Tools to help to create tidy data, where each column is a variable, each row is an observation, and each cell contains a single value.  'tidyr' contains tools for changing the shape (pivoting) and hierarchy (nesting and 'unnesting') of a dataset, turning deeply nested lists into rectangular data frames ('rectangling'), and extracting values out of string columns. It also includes tools for working with missing values (both implicit and explicit).",
+      "License": "MIT + file LICENSE",
+      "URL": "https://tidyr.tidyverse.org, https://github.com/tidyverse/tidyr",
+      "BugReports": "https://github.com/tidyverse/tidyr/issues",
+      "Depends": [
+        "R (>= 3.6)"
+      ],
+      "Imports": [
+        "cli (>= 3.4.1)",
+        "dplyr (>= 1.0.10)",
+        "glue",
+        "lifecycle (>= 1.0.3)",
+        "magrittr",
+        "purrr (>= 1.0.1)",
+        "rlang (>= 1.1.1)",
+        "stringr (>= 1.5.0)",
+        "tibble (>= 2.1.1)",
+        "tidyselect (>= 1.2.0)",
+        "utils",
+        "vctrs (>= 0.5.2)"
+      ],
+      "Suggests": [
+        "covr",
+        "data.table",
+        "knitr",
+        "readr",
+        "repurrrsive (>= 1.1.0)",
+        "rmarkdown",
+        "testthat (>= 3.0.0)"
+      ],
+      "LinkingTo": [
+        "cpp11 (>= 0.4.0)"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "RoxygenNote": "7.3.0",
+      "NeedsCompilation": "yes",
+      "Author": "Hadley Wickham [aut, cre], Davis Vaughan [aut], Maximilian Girlich [aut], Kevin Ushey [ctb], Posit Software, PBC [cph, fnd]",
+      "Maintainer": "Hadley Wickham <hadley@posit.co>",
+      "Repository": "RSPM"
+    },
     "tidyselect": {
       "Package": "tidyselect",
       "Version": "1.2.1",
@@ -1008,6 +1780,109 @@
       "NeedsCompilation": "yes",
       "Author": "Lionel Henry [aut, cre], Hadley Wickham [aut], Posit Software, PBC [cph, fnd]",
       "Maintainer": "Lionel Henry <lionel@posit.co>",
+      "Repository": "RSPM"
+    },
+    "tidytext": {
+      "Package": "tidytext",
+      "Version": "0.4.2",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Text Mining using 'dplyr', 'ggplot2', and Other Tidy Tools",
+      "Authors@R": "c( person(\"Gabriela\", \"De Queiroz\", , \"gabidequeiroz@gmail.com\", role = \"ctb\"), person(\"Colin\", \"Fay\", , \"contact@colinfay.me\", role = \"ctb\", comment = c(ORCID = \"0000-0001-7343-1846\")), person(\"Emil\", \"Hvitfeldt\", , \"emilhhvitfeldt@gmail.com\", role = \"ctb\"), person(\"Os\", \"Keyes\", , \"ironholds@gmail.com\", role = \"ctb\", comment = c(ORCID = \"0000-0001-5196-609X\")), person(\"Kanishka\", \"Misra\", , \"kmisra@purdue.edu\", role = \"ctb\"), person(\"Tim\", \"Mastny\", , \"tim.mastny@gmail.com\", role = \"ctb\"), person(\"Jeff\", \"Erickson\", , \"jeff@erick.so\", role = \"ctb\"), person(\"David\", \"Robinson\", , \"admiral.david@gmail.com\", role = \"aut\"), person(\"Julia\", \"Silge\", , \"julia.silge@gmail.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-3671-836X\")) )",
+      "Description": "Using tidy data principles can make many text mining tasks easier, more effective, and consistent with tools already in wide use. Much of the infrastructure needed for text mining with tidy data frames already exists in packages like 'dplyr', 'broom', 'tidyr', and 'ggplot2'. In this package, we provide functions and supporting data sets to allow conversion of text to and from tidy formats, and to switch seamlessly between tidy tools and existing text mining packages.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://juliasilge.github.io/tidytext/, https://github.com/juliasilge/tidytext",
+      "BugReports": "https://github.com/juliasilge/tidytext/issues",
+      "Depends": [
+        "R (>= 2.10)"
+      ],
+      "Imports": [
+        "cli",
+        "dplyr (>= 1.1.1)",
+        "generics",
+        "janeaustenr",
+        "lifecycle",
+        "Matrix",
+        "methods",
+        "purrr (>= 0.1.1)",
+        "rlang (>= 0.4.10)",
+        "stringr",
+        "tibble",
+        "tokenizers",
+        "vctrs"
+      ],
+      "Suggests": [
+        "broom",
+        "covr",
+        "data.table",
+        "ggplot2",
+        "hunspell",
+        "knitr",
+        "mallet",
+        "NLP",
+        "quanteda",
+        "readr",
+        "reshape2",
+        "rmarkdown",
+        "scales",
+        "stm",
+        "stopwords",
+        "testthat (>= 2.1.0)",
+        "textdata",
+        "tidyr",
+        "tm",
+        "topicmodels",
+        "vdiffr",
+        "wordcloud"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/Needs/website": "ropensci/gutenbergr",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "LazyData": "TRUE",
+      "RoxygenNote": "7.3.1",
+      "NeedsCompilation": "no",
+      "Author": "Gabriela De Queiroz [ctb], Colin Fay [ctb] (<https://orcid.org/0000-0001-7343-1846>), Emil Hvitfeldt [ctb], Os Keyes [ctb] (<https://orcid.org/0000-0001-5196-609X>), Kanishka Misra [ctb], Tim Mastny [ctb], Jeff Erickson [ctb], David Robinson [aut], Julia Silge [aut, cre] (<https://orcid.org/0000-0002-3671-836X>)",
+      "Maintainer": "Julia Silge <julia.silge@gmail.com>",
+      "Repository": "RSPM"
+    },
+    "tokenizers": {
+      "Package": "tokenizers",
+      "Version": "0.3.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Fast, Consistent Tokenization of Natural Language Text",
+      "Date": "2022-12-19",
+      "Description": "Convert natural language text into tokens. Includes tokenizers for shingled n-grams, skip n-grams, words, word stems, sentences, paragraphs, characters, shingled characters, lines, Penn Treebank, regular expressions, as well as functions for counting characters, words, and sentences, and a function for splitting longer texts into separate documents, each with the same number of words.  The tokenizers have a consistent interface, and the package is built on the 'stringi' and 'Rcpp' packages for  fast yet correct tokenization in 'UTF-8'.",
+      "License": "MIT + file LICENSE",
+      "LazyData": "yes",
+      "Authors@R": "c(person(\"Lincoln\", \"Mullen\", role = c(\"aut\", \"cre\"), email = \"lincoln@lincolnmullen.com\", comment = c(ORCID = \"0000-0001-5103-6917\")), person(\"Os\", \"Keyes\", role = c(\"ctb\"), email = \"ironholds@gmail.com\", comment = c(ORCID = \"0000-0001-5196-609X\")), person(\"Dmitriy\", \"Selivanov\", role = c(\"ctb\"), email = \"selivanov.dmitriy@gmail.com\"), person(\"Jeffrey\", \"Arnold\", role = c(\"ctb\"), email = \"jeffrey.arnold@gmail.com\", comment = c(ORCID = \"0000-0001-9953-3904\")), person(\"Kenneth\", \"Benoit\", role = c(\"ctb\"), email = \"kbenoit@lse.ac.uk\", comment = c(ORCID = \"0000-0002-0797-564X\")))",
+      "URL": "https://docs.ropensci.org/tokenizers/, https://github.com/ropensci/tokenizers",
+      "BugReports": "https://github.com/ropensci/tokenizers/issues",
+      "RoxygenNote": "7.2.1",
+      "Depends": [
+        "R (>= 3.1.3)"
+      ],
+      "Imports": [
+        "stringi (>= 1.0.1)",
+        "Rcpp (>= 0.12.3)",
+        "SnowballC (>= 0.5.1)"
+      ],
+      "LinkingTo": [
+        "Rcpp"
+      ],
+      "Encoding": "UTF-8",
+      "Suggests": [
+        "covr",
+        "knitr",
+        "rmarkdown",
+        "stopwords (>= 0.9.0)",
+        "testthat"
+      ],
+      "VignetteBuilder": "knitr",
+      "NeedsCompilation": "yes",
+      "Author": "Lincoln Mullen [aut, cre] (<https://orcid.org/0000-0001-5103-6917>), Os Keyes [ctb] (<https://orcid.org/0000-0001-5196-609X>), Dmitriy Selivanov [ctb], Jeffrey Arnold [ctb] (<https://orcid.org/0000-0001-9953-3904>), Kenneth Benoit [ctb] (<https://orcid.org/0000-0002-0797-564X>)",
+      "Maintainer": "Lincoln Mullen <lincoln@lincolnmullen.com>",
       "Repository": "RSPM"
     },
     "utf8": {
@@ -1124,6 +1999,47 @@
       "NeedsCompilation": "no",
       "Author": "Jim Hester [aut], Lionel Henry [aut, cre], Kirill Müller [aut], Kevin Ushey [aut], Hadley Wickham [aut], Winston Chang [aut], Jennifer Bryan [ctb], Richard Cotton [ctb], Posit Software, PBC [cph, fnd]",
       "Maintainer": "Lionel Henry <lionel@posit.co>",
+      "Repository": "RSPM"
+    },
+    "xml2": {
+      "Package": "xml2",
+      "Version": "1.3.8",
+      "Source": "Repository",
+      "Title": "Parse XML",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", role = \"aut\"), person(\"Jim\", \"Hester\", role = \"aut\"), person(\"Jeroen\", \"Ooms\", email = \"jeroenooms@gmail.com\", role = c(\"aut\", \"cre\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")), person(\"R Foundation\", role = \"ctb\", comment = \"Copy of R-project homepage cached as example\") )",
+      "Description": "Bindings to 'libxml2' for working with XML data using a simple,  consistent interface based on 'XPath' expressions. Also supports XML schema validation; for 'XSLT' transformations see the 'xslt' package.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://xml2.r-lib.org, https://r-lib.r-universe.dev/xml2",
+      "BugReports": "https://github.com/r-lib/xml2/issues",
+      "Depends": [
+        "R (>= 3.6.0)"
+      ],
+      "Imports": [
+        "cli",
+        "methods",
+        "rlang (>= 1.1.0)"
+      ],
+      "Suggests": [
+        "covr",
+        "curl",
+        "httr",
+        "knitr",
+        "magrittr",
+        "mockery",
+        "rmarkdown",
+        "testthat (>= 3.2.0)",
+        "xslt"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.2.3",
+      "SystemRequirements": "libxml2: libxml2-dev (deb), libxml2-devel (rpm)",
+      "Collate": "'S4.R' 'as_list.R' 'xml_parse.R' 'as_xml_document.R' 'classes.R' 'format.R' 'import-standalone-obj-type.R' 'import-standalone-purrr.R' 'import-standalone-types-check.R' 'init.R' 'nodeset_apply.R' 'paths.R' 'utils.R' 'xml2-package.R' 'xml_attr.R' 'xml_children.R' 'xml_document.R' 'xml_find.R' 'xml_missing.R' 'xml_modify.R' 'xml_name.R' 'xml_namespaces.R' 'xml_node.R' 'xml_nodeset.R' 'xml_path.R' 'xml_schema.R' 'xml_serialize.R' 'xml_structure.R' 'xml_text.R' 'xml_type.R' 'xml_url.R' 'xml_write.R' 'zzz.R'",
+      "Config/testthat/edition": "3",
+      "NeedsCompilation": "yes",
+      "Author": "Hadley Wickham [aut], Jim Hester [aut], Jeroen Ooms [aut, cre], Posit Software, PBC [cph, fnd], R Foundation [ctb] (Copy of R-project homepage cached as example)",
+      "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
       "Repository": "RSPM"
     }
   }
